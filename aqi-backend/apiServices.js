@@ -86,7 +86,7 @@ async function getAqiByCity(cityName) {
     return data;
 
   } catch (err) {
-    console.error("❌ Error fetching AQI:", err);
+    console.error("Error fetching AQI:", err);
 
     return {
       error: "Failed to fetch AQI data. External API unreachable.",
