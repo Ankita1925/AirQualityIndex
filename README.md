@@ -64,47 +64,11 @@ Shows:
 | Category | Technology |
 |---------|------------|
 | Frontend | React.js, Chart.js, CSS |
+| Backend | Node.js|
 | API | WAQI (World Air Quality Index) |
 | Tools | LocalStorage, Fetch API |
 | Mapping | WAQI Tile Server + Iframe |
 | Build Tool | Vite |
-
----
-
-## 📁 Folder Structure
-aqi-dashboard/
-│
-├── public/
-│    └── vite.svg
-│
-├── src/
-│    ├── Components/
-│    │    ├── AqiSearch.jsx        # Search bar + suggestions
-│    │    ├── AqiDisplay.jsx       # Main AQI card (AQI circle, pollutants)
-│    │    ├── TrendGraph.jsx       # Historical + forecast graph
-│    │    └── AqiMap.jsx           # WAQI map integration
-│    │
-│    ├── Services/
-│    │    ├── aqiService.js        # Fetch AQI data from backend WAQI API
-│    │    └── favoriteService.js   # LocalStorage favorites utility
-│    │
-│    ├── Css/
-│    │    └── AqiStyle.css         # Global styles for AQI UI
-│    │
-│    ├── App.jsx
-│    └── main.jsx
-│
-├── screenshots/
-│    ├── home.png
-│    ├── aqi_display.png
-│    ├── graph.png
-│    └── map.png
-│
-├── .env                            # Contains WAQI API Token (not committed)
-├── package.json
-├── vite.config.js
-└── README.md
-
 
 
 
