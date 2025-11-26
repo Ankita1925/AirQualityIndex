@@ -1,0 +1,276 @@
+/* --- AqiStyle.css --- */
+body {
+    background-color: #f4f7f6; /* Soft background */
+    font-family: 'Inter', sans-serif; /* Example font */
+}
+.page-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.city-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ccc;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  background: white;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.error-msg {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.loading-msg {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.aqi-card-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.aqi-card {
+    max-width: 900px; /* Max width for larger screens */
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Subtle shadow for lift */
+    background-color: #ffffff; /* Default background if glass-card isn't used */
+}
+
+/* Glass Card Effect (Enhancing your existing class) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.aqi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.city-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-icon {
+    color: #007bff; /* Primary color highlight */
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 5px;
+}
+
+.favorite-btn:hover {
+    color: #f39c12; /* Star color on hover */
+}
+
+.favorite-btn.is-favorite {
+    color: #e74c3c; /* Red for favorited */
+}
+
+.favorite-btn:active {
+    transform: scale(0.9);
+}
+.aqi-main-data {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-top: 1px dashed #eee;
+    border-bottom: 1px dashed #eee;
+}
+
+.aqi-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* White text for contrast on colored background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.5s ease;
+}
+
+.aqi-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.aqi-label {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.aqi-status-details p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dominant-pollutant-value {
+    font-weight: 600;
+    color: #2c3e50;
+}
+.pollutant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 15px;
+}
+
+.pollutant-card {
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pollutant-card:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pollutant-key {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #007bff; /* Highlight key */
+    margin-bottom: 5px;
+}
+
+.pollutant-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+}
+
+.pollutant-unit {
+    font-size: 0.75rem;
+    color: #777;
+}
+.aqi-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.updated-time {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.attribution {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.attribution-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.attribution-link:hover {
+    text-decoration: underline;
+}
